@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#E30613" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="description" content="Catálogo de veladoras · Impulsora Super Mar Mass · Sucursal Izúcar de Matamoros, Puebla. Precios netos por caja." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Veladoras Izúcar" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="img/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <title>Veladoras Super Mar Mass · Izúcar de Matamoros</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Portada -->
+  <section id="cover" role="dialog" aria-label="Portada del catálogo">
+    <div class="papel-picado papel-top" aria-hidden="true"></div>
+    <img class="cover-logo" src="img/logo.webp" alt="Impulsora Super Mar Mass" width="160" height="160" />
+    <img class="cover-character" src="img/personaje.webp" alt="" width="220" height="203" />
+    <h1 class="cover-title">Catálogo de Veladoras</h1>
+    <p class="cover-sub">Día de Muertos · Precios netos por caja</p>
+    <p class="cover-place"><strong>Sucursal Izúcar de Matamoros</strong><br />Impulsora Super Mar Mass</p>
+    <div class="cover-actions">
+      <button type="button" class="btn btn-primary" id="btn-ver-catalogo">Ver catálogo</button>
+      <a class="btn btn-wa" data-ext data-wa-link href="https://wa.me/5212381473009">💬 WhatsApp <span data-wa-text>238 147 3009</span></a>
+      <a class="btn btn-secondary" data-ext href="tel:9535340450">📞 Llamar 953 534 0450</a>
+    </div>
+    <div class="marigold-row" aria-hidden="true"><i class="flor"></i><i class="flor"></i><i class="flor"></i></div>
+  </section>
+
+  <!-- App -->
+  <div id="app">
+    <header class="site-header">
+      <div class="papel-picado papel-header" aria-hidden="true"></div>
+      <div class="header-row">
+        <img class="header-logo" src="img/logo.webp" alt="" width="44" height="44" />
+        <div class="header-brand">
+          <strong>Super Mar Mass · Veladoras</strong>
+          <span>Sucursal Izúcar de Matamoros</span>
+        </div>
+        <a class="header-btn header-wa" data-ext data-wa-link data-wa-title href="https://wa.me/5212381473009" aria-label="WhatsApp" title="WhatsApp 238 147 3009">💬</a>
+        <a class="header-btn header-call" data-ext href="tel:9535340450" aria-label="Llamar" title="Llamar 953 534 0450">📞</a>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="search" placeholder="Buscar por nombre, marca o código…" autocomplete="off" enterkeyhint="search" aria-label="Buscar productos" />
+      </div>
+    </header>
+
+    <nav class="chips" id="brand-chips" aria-label="Filtrar por marca"></nav>
+
+    <div class="meta-bar">
+      <span id="result-count">Cargando…</span>
+      <span>Precio neto por caja</span>
+    </div>
+
+    <main class="product-grid" id="grid" aria-live="polite"></main>
+
+    <footer class="site-footer">
+      <p><strong>Impulsora Super Mar Mass</strong></p>
+      <p>Sucursal Izúcar de Matamoros, Puebla</p>
+      <p>WhatsApp <a data-ext data-wa-link data-wa-text href="https://wa.me/5212381473009">238 147 3009</a> · Tel. <a data-ext href="tel:9535340450">953 534 0450</a></p>
+      <p class="small">Precios netos sujetos a cambio y disponibilidad.</p>
+    </footer>
+  </div>
+
+  <!-- Barra de pedido -->
+  <button type="button" id="cart-bar" hidden>
+    <span class="cart-bar-icon">🛒</span>
+    <span class="cart-bar-text"><strong>Mi pedido</strong> <span id="cart-bar-count"></span></span>
+    <span class="cart-bar-total" id="cart-bar-total"></span>
+  </button>
+
+  <!-- Hojas -->
+  <div id="sheet-backdrop" hidden></div>
+  <aside id="detail-sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-nombre" hidden>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" aria-label="Cerrar">×</button>
+    <div class="sheet-scroll" id="sheet-content"></div>
+  </aside>
+  <aside id="cart-sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" aria-label="Cerrar">×</button>
+    <div class="sheet-scroll" id="cart-content"></div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="data/productos.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

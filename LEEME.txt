@@ -1,0 +1,30 @@
+Catálogo de Veladoras · Impulsora Super Mar Mass
+Sucursal Izúcar de Matamoros, Puebla
+WhatsApp 238 147 3009 · Tel. 953 534 0450
+
+CÓMO ABRIR
+----------
+1) Rápido: abre index.html con Chrome, Edge o Safari (funciona sin internet;
+   los datos van dentro de data/productos.js).
+2) Como app en el celular (PWA): sube esta carpeta a cualquier hosting con
+   HTTPS (Netlify, GitHub Pages, etc.) o en la misma red Wi-Fi ejecuta
+       python3 -m http.server 8080
+   y abre http://IP-DE-TU-PC:8080 . En Chrome usa "Agregar a pantalla de inicio".
+
+FUNCIONES
+---------
+- Buscar por nombre, marca o código de barras / clave.
+- Filtrar por marca.
+- Ficha de producto con código, presentación y precio neto por caja.
+- "Mi pedido": agrega cajas, ve el total y envíalo por WhatsApp
+  (mensaje con código, nombre, cajas, subtotal y total).
+- Botones de WhatsApp y Llamar.
+
+CONTENIDO
+---------
+index.html, styles.css, app.js   la app
+data/productos.json              48 productos (también data/productos.js)
+img/                             logo, personaje, iconos y fotos (webp)
+manifest.webmanifest, service-worker.js   instalación y uso sin conexión
+
+Precios netos sujetos a cambio y disponibilidad.
